@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="p-5 w-100"></div>
+
+
+    <form [formGroup]="userForm" (ngSubmit)="search(userForm.value)" class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search Name" aria-label="Search Name"
+               aria-describedby="search"
+               formControlName="name" >
+        <div class="input-group-append">
+            <button class="btn btn-success input-group-text poi" id="search" type="submit">Search</button>
+        </div>
+    </form>
+
+
+    <table class="table" *ngIf="users.length">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Avatar</th>
+            <th scope="col">Name</th>
+            <th scope="col">User type</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  *ngFor="let user of users; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td><img src="{{user.avatar_url}}" style="width: 50px;" alt=""></td>
+            <td>{{user.type}}</td>
+            <td>{{user.login}}</td>
+            <td><a  [routerLink]="['/detail', user.login]">Show more details</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

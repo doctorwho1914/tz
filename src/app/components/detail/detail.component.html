@@ -1,0 +1,9 @@
+<h1 class="text-center pt-5" *ngIf="notFound">User Not Found</h1>
+<div class="card mx-auto mt-5" style="width: 250px" *ngIf="user">
+    <img class="card-img-top" src="{{user.avatar_url}}" alt="{{user.login}}">
+    <div class="card-body">
+        <h5 class="card-title">{{user.login}}</h5>
+        <p class="card-text">Type: {{user.type}}</p>
+        <a href="{{user.html_url}}" class="btn btn-primary" target="_blank">Go to github account</a>
+    </div>
+</div>

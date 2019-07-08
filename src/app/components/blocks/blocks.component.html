@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="p-5 w-100"></div>
+
+
+    <form [formGroup]="userForm" (ngSubmit)="search(userForm.value)" class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search Name" aria-label="Search Name"
+               aria-describedby="search"
+               formControlName="name" >
+        <div class="input-group-append">
+            <button class="btn btn-success input-group-text poi" id="search" type="submit">Search</button>
+        </div>
+    </form>
+
+
+    <div class="row">
+        <div class="col-3" *ngFor="let user of users">
+            <div class="card mb-1">
+                <img class="card-img-top" src="{{user.avatar_url}}" alt="{{user.login}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.login}}</h5>
+                    <p class="card-text">Type: {{user.type}}</p>
+                    <a [routerLink]="['/detail', user.login]" class="btn btn-primary">Show more details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

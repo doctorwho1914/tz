@@ -9,11 +9,11 @@ export class UserService {
     constructor(private http: HttpClient) {
     }
 
-    get(login: string): Promise<> {
+    get(login: string): Promise<any> {
         return this.http.get<any>(`https://api.github.com/users/${login}`).toPromise();
     }
 
-    search(query: string): Promise<> {
+    search(query: string): Promise<any> {
         return this.http.get<any[]>(`https://api.github.com/search/users?q=${query}&per_page=20`).toPromise();
     }
 }

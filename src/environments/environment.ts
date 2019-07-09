@@ -5,10 +5,10 @@
 export const environment = {
     production: false,
     firebase: {
-        apiKey: "AIzaSyBmNkRGMwyD_Z6sPYY3FtKI4H9w7kUzYi4",
-        authDomain: "cohesive-apogee-95023.firebaseapp.com",
+        apiKey: "AIzaSyBsY3Tt5TxN3QmIzfekTgIsFwvU6ZeoesA",
+        authDomain: "tz123-96d0f.firebaseapp.com",
         databaseURL: "https://cohesive-apogee-95023.firebaseio.com",
-        projectId: "cohesive-apogee-95023",
+        projectId: "tz123-96d0f",
         storageBucket: "cohesive-apogee-95023.appspot.com",
         messagingSenderId: "546552200902"
     }

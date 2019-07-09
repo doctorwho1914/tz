@@ -44,4 +44,11 @@ export class RegisterComponent {
             });
     }
 
+    tryGitHubLogin() {
+        this.authService.doGitHubLogin()
+            .then(res => {
+                    this.router.navigate(['/']);
+                }, err => console.log(err)
+            );
+    }
 }

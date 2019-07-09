@@ -1,0 +1,20 @@
+<h1 class="header pt-5">Login</h1>
+
+<div class="container">
+ <div class="card mx-auto p-3 mt-3" style="max-width: 500px">
+
+   <form [formGroup]="loginForm" (submit)="tryLogin(loginForm.value)">
+     <div class="form-group">
+       <label for="email">Email address</label>
+       <input type="email" class="form-control" formControlName="email" id="email" placeholder="email">
+     </div>
+     <div class="form-group">
+       <label for="password">Password</label>
+       <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+     </div>
+     <button type="submit" class="btn btn-outline-primary">Submit</button>
+     <a class="float-right" routerLink="/register">Or create account</a>
+   </form>
+ </div>
+</div>
+<p class="text-danger pt-3 text-center">{{errorMessage}}</p>
